@@ -1,8 +1,18 @@
 [package]
-name = "ProxyPort"
+name = "proxy_port"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "1.0.70"
+clap = { version = "4.2.1", features = ["derive"] }
+env_logger = "0.10.0"
+fast-socks5 = { git = "https://github.com/unsafe-rs/fast-socks5.git", branch = "master" }
+hyper = { version = "1.0.0-rc.3", features = ["full"] }
+log = "0.4.17"
+thiserror = "1.0.40"
+tokio = { version = "1.27.0", features = ["rt-multi-thread", "full"] }
+tokio-stream = "0.1.12"
+toml = "0.7.3"
